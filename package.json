@@ -1,0 +1,30 @@
+{
+  "name": "react-native-highcharts-wrapper",
+  "version": "0.0.1",
+  "description": "Easy to use wrapper to utilise Highcharts within react-native applications.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "keywords": [
+    "react-native-component",
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "highcharts",
+    "graphs",
+    "wrapper",
+    "WebView"
+  ],
+  "author": "socrypto",
+  "license": "MIT",
+    "bugs": {
+    "url": "https://github.com/socrypto/react-native-highcharts-wrapper/issues"
+  },
+  "homepage": "https://github.com/socrypto/react-native-highcharts-wrapper#readme"
+}
