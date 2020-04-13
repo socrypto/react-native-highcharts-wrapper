@@ -2,9 +2,10 @@ import React from 'react';
 import { WebView } from 'react-native-webview';
 import { View } from 'react-native';
 
-import { getInit, getEnd } from './helpers';
+import styles from './styles';
+import { getInit, getEnd, flattenObject } from './helpers';
 
-function ChartWeb(props) {
+function Chart(props) {
   let config = JSON.stringify(props.config, (_, value) => {
     //create string of json but if it detects function it uses toString()
     return typeof value === 'function' ? value.toString() : value;
@@ -29,4 +30,4 @@ function ChartWeb(props) {
   );
 }
 
-export default ChartWeb;
+export default Chart;
