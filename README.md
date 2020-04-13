@@ -18,7 +18,7 @@ export default function HighChart() {
   const conf = {
     chart: {
       type: 'spline',
-      animation: Highcharts.svg, // don't animate in old IE
+      animation: Highcharts.svg,
       marginRight: 10,
       events: {
         load: function () {
@@ -60,10 +60,7 @@ export default function HighChart() {
           const data = [];
           const time = new Date().getTime();
           for (let i = -19; i <= 0; i += 1) {
-            data.push({
-              x: time + i * 2000,
-              y: Math.random() * (13000 - 12000) + 12000,
-            });
+            data.push({ x: time + i * 2000, y: Math.random() * (13000 - 12000) + 12000 });
           }
           return data;
         })(),
@@ -78,10 +75,10 @@ export default function HighChart() {
 
   return (
     <ChartView
-      style={{ height: 300 }}
+      style={{ height: 350 }}
       config={conf}
       options={options}
-    ></ChartView>
+    />
   );
 }
 ```
