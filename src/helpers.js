@@ -14,7 +14,6 @@ export const getInit = (props) => `<html>
                                     }
                                     </style>
                                     <head>
-                                        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
                                         ${
                                           props.stock
                                             ? '<script src="https://code.highcharts.com/stock/highstock.js"></script>'
@@ -32,7 +31,7 @@ export const getInit = (props) => `<html>
                                         }
                                         <script src="https://code.highcharts.com/modules/exporting.js"></script>
                                         <script>
-                                        $(function () {
+                                        document.addEventListener("DOMContentLoaded", function(event) {
                                             Highcharts.setOptions(${JSON.stringify(
                                               props.options
                                             )});
