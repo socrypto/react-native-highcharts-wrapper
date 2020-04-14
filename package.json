@@ -1,13 +1,13 @@
 {
   "name": "react-native-highcharts-wrapper",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Easy to use wrapper to utilise Highcharts within react-native applications.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react-native-webview": "^9.2.0"
+    "react-native-webview": "8.1.1"
   },
   "peerDependencies": {
     "react": "*",
