@@ -13,6 +13,8 @@ or
 ## Example
 
 ```javascript
+import ChartView from 'react-native-highcharts-wrapper';
+
 export default function HighChart() {
   const Highcharts = 'Highcharts';
   const conf = {
