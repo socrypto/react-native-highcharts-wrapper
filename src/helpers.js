@@ -25,6 +25,11 @@ export const getInit = (props) => `<html>
                                             : ''
                                         }
                                         ${
+                                          props.enableVariablePie
+                                            ? '<script src="https://code.highcharts.com/modules/variable-pie.js"></script>'
+                                            : ''
+                                        }
+                                        ${
                                           props.guage
                                             ? '<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>'
                                             : ''

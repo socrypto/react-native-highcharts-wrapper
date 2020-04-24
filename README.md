@@ -62,7 +62,10 @@ export default function HighChart() {
           const data = [];
           const time = new Date().getTime();
           for (let i = -19; i <= 0; i += 1) {
-            data.push({ x: time + i * 2000, y: Math.random() * (13000 - 12000) + 12000 });
+            data.push({
+              x: time + i * 2000,
+              y: Math.random() * (13000 - 12000) + 12000,
+            });
           }
           return data;
         })(),
@@ -75,24 +78,19 @@ export default function HighChart() {
     lang: { decimalPoint: ',', thousandsSep: '.' },
   };
 
-  return (
-    <ChartView
-      style={{ height: 350 }}
-      config={conf}
-      options={options}
-    />
-  );
+  return <ChartView style={{ height: 350 }} config={conf} options={options} />;
 }
 ```
 
 ## Props
 
-| Prop    | Required |                                                                                                 Description |
-| ------- | :------: | ----------------------------------------------------------------------------------------------------------: |
-| config  |   true   | Highcharts configuration [See the docs.>>](http://www.highcharts.com/docs/getting-started/your-first-chart) |
-| stock   |  false   |                                                                                Default false; use Highstock |
-| more    |  false   |                                                                           Default false; use Highstock-more |
-| heatMap |  false   |                                                                                  Default false; use HeatMap |
-| style   |  false   |                                                                  Style object to be passed onto the WebView |
-| options |  false   |                                                                Pass global and lang options from Highcharts |
-| guage   |  false   |                                                                        Import gauge library from highcharts |
+| Prop            | Required |                                                                                                 Description |
+| --------------- | :------: | ----------------------------------------------------------------------------------------------------------: |
+| config          |   true   | Highcharts configuration [See the docs.>>](http://www.highcharts.com/docs/getting-started/your-first-chart) |
+| stock           |  false   |                                                         Use Highstock instead of Highcharts - Default false |
+| style           |  false   |                                                                  Style object to be passed into the WebView |
+| heatMap         |  false   |                                                                                 Use HeatMap - Default false |
+| options         |  false   |                                                                Pass global and lang options into Highcharts |
+| enableRadiusPie |  false   |                                                   Import radius pie library from highcharts - Default false |
+| more            |  false   |                                                               Import highstock-more library - Default false |
+| guage           |  false   |                                                        Import gauge library from highcharts - Default false |

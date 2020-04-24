@@ -1,6 +1,6 @@
 {
   "name": "react-native-highcharts-wrapper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Easy to use wrapper to utilise Highcharts within react-native applications.",
   "main": "src/index.js",
   "scripts": {
