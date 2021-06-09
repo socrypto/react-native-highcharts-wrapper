@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import styles from './styles';
 import { getInit, getEnd, flattenObject } from './helpers';
 
-function Chart(props) {
+const Chart = React.forwardRef((props, ref) => {
   let config = JSON.stringify(props.config, (_, value) => {
     //create string of json but if it detects function it uses toString()
     return typeof value === 'function' ? value.toString() : value;
@@ -24,10 +24,11 @@ function Chart(props) {
         scalesPageToFit={true}
         scrollEnabled={false}
         automaticallyAdjustContentInsets={true}
+        ref={ref}
         {...props}
       />
     </View>
   );
-}
+});
 
 export default Chart;
